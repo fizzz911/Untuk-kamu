@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNTUKMU</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hai, kamu...</h1>
+    <p>Aku Ada Puisi Dan Pesan untuk Dirimu</p>
+    <button onclick="mainkanMusik(); tampilkanPesan()">BUKA PESAN</button>
+    
+    <div id="pesanRahasia" class="hidden">
+      <p>
+        Awalnya, kau hanyalah sosok tanpa makna di mataku—sekadar wajah yang lewat di keramaian dunia. 
+        Layaknya angin yang berhembus tanpa sempat kurasakan, tak ada getar, tidak ada desir hanya ruang hampa yang tak mengusik. 
+        Waktu berjalan tanpa jejakmu di pikiranku, tanpa bayangmu mengendap di sudut hatiku. 
+        Segalanya biasa saja, seolah semesta belum berniat memperkenalkan kita lebih jauh.
+        <br><br>
+        Namun, takdir adalah seniman ulung. Ia melukis pertemuan kita dengan goresan yang tak bisa kutebak. 
+        Satu pertemuan kecil lalu satu lagi, hingga perlahan-lahan aku hanyut dalam ritme yang tak kusadari. 
+        Bagai embun yang menetes pelan di ujung daun, kehadiranmu sederhana tapi tak bisa diabaikan. 
+        Ada bahagia yang muncul tanpa alasan; murni tanpa perlu penjelasan.
+        <br><br>
+        Senyummu—ah, senyummu—bukan sekadar lengkung di bibir. 
+        Ia adalah pagi yang menyusup ke dalam mataku setelah malam panjang yang sunyi.
+        <br><br>
+        Hangat, jujur dan entah bagaimana—menenangkan. 
+        Sejak saat itu, aku menemukamu di segala hal; di celah cahaya yang jatuh di lantai, di hembusan angin sore, 
+        di detak waktu yang berusaha kuabaikan. Kau berubah menjadi semacam jeda di antara hiruk pikuk pikiranku, 
+        pelarian yang tak pernah kuminta namun diam-diam kucari.
+        <br><br>
+        Aku tak tau kapan tepatnya kau mulai berarti. 
+        Mungkin saat tatapan kita bersinggungan tanpa sengaja atau ketika tawa kecilmu pecah di udara dan mengendap lama di telingaku. 
+        Yang aku tau, sekarang hari-hariku punya warna yang berbeda—hanya karena kau ada di dalamnya—sesederhana itu serumit itu.
+      </p>
+
+      <p style="margin-top: 30px;">
+        💌 Aku juga mau nanya satu hal ke kamu... <br>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSccsZT4uIr2Okq4wmq-4v6DpiilzEcSxsYROdCPfx4yM1paKg/viewform?usp=header" 
+           target="_blank" 
+           style="color: #e91e63; font-weight: bold; text-decoration: none;">
+          Jawab pertanyaanku disini
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <audio id="musik" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function tampilkanPesan() {
+      document.getElementById("pesanRahasia").classList.remove("hidden");
+    }
+
+    function mainkanMusik() {
+      var musik = document.getElementById("musik");
+      musik.play();
+    }
+  </script>
+
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 40px;
+      color: #444;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #ffffffc2;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    button {
+      padding: 10px 25px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #d81b60;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #pesanRahasia {
+      margin-top: 30px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</body>
+</html>
